@@ -1,8 +1,30 @@
+# Getting Started With this project
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, Create a new .env file in the root of your project and paste this, then fill in the placeholders
+
+```bash
+# Public Environment Variables
+NEXT_PUBLIC_CURRENCY=$
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+
+# Private Environment Variables
+CLERK_SECRET_KEY=
+MONGODB_URI=''
+INNGEST_SIGNING_KEY=''
+INNGEST_EVENT_KEY=''
+# Cloudinary
+CLOUDINARY_CLOUD_NAME =''
+CLOUDINARY_API_KEY =''
+CLOUDINARY_API_SECRET =''
+```
+
+Visit [clerk website](https://dashboard.clerk.com) and signup then follow the instructions to create a project and get your NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY & CLERK_SECRET_KEY
+
+Then, run the development server:
 
 ```bash
 npm run dev
