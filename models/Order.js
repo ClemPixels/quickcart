@@ -5,18 +5,18 @@ const orderShema = new mongoose.Schema({
   items: [
     {
       product: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         required: true,
-        ref: "Product",
+        ref: "product",
       },
       quantity: { type: Number, required: true },
     },
   ],
   amount: { type: Number, required: true },
   address: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: String,
     required: true,
-    ref: "Address",
+    ref: "address",
   },
   status: { type: String, required: true, default: "Pending" },
   date: { type: Number, required: true },

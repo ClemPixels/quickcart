@@ -12,16 +12,9 @@ export async function GET(request) {
     Address.length;
     Product.length;
 
-    // const orders = await Order.find({ userId }).populate(
-    //   "address items.product"
-    // );
-
-    const orders = await Order.find({ userId });
-    console.log("Orders before population:", orders);
-    const populatedOrders = await Order.find({ userId }).populate(
+    const orders = await Order.find({ userId }).populate(
       "address items.product"
     );
-    console.log("Orders after population:", populatedOrders);
 
     return NextResponse.json({ success: true, orders }, { status: 200 });
   } catch (error) {
