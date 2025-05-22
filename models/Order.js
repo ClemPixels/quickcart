@@ -7,7 +7,7 @@ const orderShema = new mongoose.Schema({
       product: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref: "product",
+        ref: "Product",
       },
       quantity: { type: Number, required: true },
     },
@@ -16,7 +16,7 @@ const orderShema = new mongoose.Schema({
   address: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
-    ref: "address",
+    ref: "Address",
   },
   status: { type: String, required: true, default: "Pending" },
   date: { type: Number, required: true },
